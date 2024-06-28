@@ -1,0 +1,39 @@
+# для процесса разработки
+# -e .
+
+pythonnet>=3.0.3
+smt
+scikit-opt
+# pygmo
+scipy
+# sphinx
+# sphinx-rtd-theme
+# sphinx_book_theme
+# myst_nb
+# fastapi
+# uvicorn[standard]
+# seaborn
+h5py
+networkx
+sortedcontainers
+# sparse
+pytest>=5.2.1
+pytest-cov>=2.8.1
+codecov>=2.0.15
+# jax
+# jaxopt
+# chex 
+# optax
+
+# torch==2.2.0
+# torch_geometric==2.4
+# # https://data.pyg.org/whl/torch-2.2.0+cu121.html
+# pyg_lib @ https://data.pyg.org/whl/torch-2.2.0%2Bcu121/pyg_lib-0.4.0%2Bpt22cu121-cp310-cp310-linux_x86_64.whl
+# torch-sparse @ https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_sparse-0.6.18%2Bpt22cu121-cp310-cp310-linux_x86_64.whl
+# torch_scatter @ https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_scatter-2.1.2%2Bpt22cu121-cp310-cp310-linux_x86_64.whl
+# torch-spline-conv @ https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_spline_conv-1.2.2%2Bpt22cu121-cp310-cp310-linux_x86_64.whl
+# torch-cluster @ https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_cluster-1.6.3%2Bpt22cu121-cp310-cp310-linux_x86_64.whl
+# torch-geometric-temporal @ git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal
+# torchdiffeq
+
+# pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
