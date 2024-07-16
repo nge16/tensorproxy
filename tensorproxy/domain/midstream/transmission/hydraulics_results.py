@@ -183,6 +183,14 @@ class ResultsShop(Convertable):
         ...,
         description="Расчетный расход топливного газа [млн м3/сут]",
     )
+    
+    N: Annotated[
+        float,
+        Unit("МВт", 1e6),
+    ] = Field(
+        ...,
+        description="Расчетная потребляемая мощность [МВт]",
+    )
 
 
 class HydraulicsResults(BaseModel):
