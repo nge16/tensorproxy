@@ -91,6 +91,11 @@ class PipeProps(BaseModel):
         5.0,
         description="Температура окружающей среды (грунта) [°C]",
     )
+    
+    Kns: Annotated[float | None, Unit("1/км", 1e-3)] = Field(
+        0.0,
+        description="Коэффициент нестационарности [1/км]",
+    )
 
 
 class Pipe(EdgeObject[LineString, PipeProps]):

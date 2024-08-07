@@ -53,6 +53,45 @@ class OutProps(BaseModel):
         title="Коммерческий расход газа, поступающий "
         "потребителю [млн м3/сут]",
     )
+    
+    Qmin: Annotated[
+        float | None,
+        Unit("млн м3/сут", 1e6 / (60 * 60 * 24)),
+        # Dynamic[float]("In", "Q"),
+    ] = Field(
+        ...,
+        title="Ограничение по минимальному объему подачи газа "
+        "для потребителя [млн м3/сут]",
+    )
+    
+    
+    Qmax: Annotated[
+        float | None,
+        Unit("млн м3/сут", 1e6 / (60 * 60 * 24)),
+        # Dynamic[float]("In", "Q"),
+    ] = Field(
+        ...,
+        title="Ограничение по максимальному подачи газа "
+        "для потребителя [млн м3/сут]",
+    )
+    
+    Pmin: Annotated[
+        float | None,
+        Unit("МПа (абс.)", 1e6),
+        # Dynamic[float]("In", "P"),
+    ] = Field(
+        None,
+        title="Ограничения по минимальному значению давления газа [МПа (абс.)]",
+    )
+    
+    Pmax: Annotated[
+        float | None,
+        Unit("МПа (абс.)", 1e6),
+        # Dynamic[float]("In", "P"),
+    ] = Field(
+        None,
+        title="Ограничения по максимальному значению давления газа [МПа (абс.)]",
+    )
 
     _boundary_type: BOUNDARY_TYPE | None = None
     """Тип граничного условия: задано давление или расход."""
