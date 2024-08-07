@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 
 from smt.utils.design_space import DesignSpace, FloatVariable
 
-from tensorproxy.simulate import Flowsheet
-from tensorproxy.simulate.simulation_result import (
-    CallableSimulationResult,
-)
+# from tensorproxy.simulate import Flowsheet
+# from tensorproxy.simulate.simulation_result import (
+#     CallableSimulationResult,
+# )
 
 from tensorproxy.domain import DomainParam
 

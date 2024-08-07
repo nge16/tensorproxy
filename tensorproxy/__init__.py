@@ -1,7 +1,7 @@
-from tensorproxy.simulate.flowsheet import Flowsheet
-from tensorproxy.simulate.simulation_result import (
-    CallableSimulationResult,
-)
+# from tensorproxy.simulate.flowsheet import Flowsheet
+# from tensorproxy.simulate.simulation_result import (
+#     CallableSimulationResult,
+# )
 from tensorproxy.domain import Parameter
 
 from .version import __version__

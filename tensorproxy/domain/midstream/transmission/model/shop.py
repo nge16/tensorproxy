@@ -111,6 +111,52 @@ class ShopProps(BaseModel):
         title="Максимально-допустимая степень сжатия",
         description="Максимально-допустимая степень сжатия [безр.]",
     )
+    
+    
+    N: Annotated[
+        float | None,
+        Unit("МВт", 1e6),
+    ] = Field(
+        25.0,
+        title="Потребляемая мощность",
+        description="Потребляемая мощность [МВт]",
+    )
+    
+    Na: Annotated[
+        float | None,
+        Unit("МВт", 1e6),
+    ] = Field(
+        None,
+        title="Располагаемая мощность цеха (компрессорной станции)",
+        description="Располагаемая мощность цеха (компрессорной станции) [МВт]",
+    )
+    
+    We: Annotated[
+        float | None,
+        Unit("кВт*час", 1e3/(60*60)),
+    ] = Field(
+        None,
+        title="Расход электроэнергии на компримирование",
+        description="Расход электроэнергии на компримирование [кВт*час]",
+    )
+    
+    r0: Annotated[
+        float | None,
+        Unit("кг/м3"),
+    ] = Field(
+        None,
+        title="Плотность газа на входе в цех",
+        description="Плотность газа на входе в цех [кг/м3]",
+    )
+    
+    Wa: Annotated[
+        float | None,
+        Unit("кВт*час", 1e3/(60*60) ),
+    ] = Field(
+        None,
+        title="Расход электроэнергии на АВО",
+        description="Расход электроэнергии на АВО [кВт*час]",
+    )
 
 
 class Shop(EdgeObject[MultiPoint, ShopProps]):

@@ -147,6 +147,22 @@ class ResultsPipe(Convertable):
         None,
         description="Расчетная температура газа в конце трубопровода [°C]",
     )
+    
+    W: Annotated[
+        float | None,
+        Unit("млн м3", 1e6),
+    ] = Field(
+        None,
+        description="Расчетный запас газа в газопроводе [млн м3]",
+    )
+    
+    Kns: Annotated[
+        float | None,
+        Unit("км", 1e3),
+    ] = Field(
+        None,
+        description="Расчетный коэффициент нестационарности [км]",
+    )
 
     @model_serializer
     def serialize_model(self) -> List[float]:
@@ -190,6 +206,14 @@ class ResultsShop(Convertable):
     ] = Field(
         ...,
         description="Расчетная потребляемая мощность [МВт]",
+    )
+    
+    Q0: Annotated[
+        float,
+        Unit("млн м3/сут", 1e6 / (60 * 60 * 24)),
+    ] = Field(
+        ...,
+        description="Расчетный комерческий расход газа на входе в цех [млн м3/сут]",
     )
 
 
